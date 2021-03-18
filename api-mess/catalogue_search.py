@@ -10,6 +10,7 @@ Search parameters:
 [] = Optional, <> = Required
 [Category], <Keyword to search for>
 
+To indicate that you do not want to input a category, simply set its value to None when using the function, do not leave it unassigned.
 For docs on what these parameters are, refer to: https://developer.roblox.com/en-us/articles/Catalog-API
 
 CATEGORY VALUES:
@@ -22,6 +23,10 @@ Gear (=5),
 Accessories (=11), 
 AvatarAnimations (=12),
 CommunityCreations (=13).
+
+Examples:
+c.search_catalogue(queryName="Duck", queryCategory=None)
+c.search_catalogue(queryName="Korblox", queryCategory=2)
 """
 
 import requests
